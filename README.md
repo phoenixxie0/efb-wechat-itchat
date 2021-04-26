@@ -52,4 +52,4 @@ flags:
     animated_stickers: true #启用对动态贴纸的实验支持。注意：您可能需要安装二进制依赖 ``libcairo`` 才能启用此功能。
     send_to_last_chat: true #在未绑定的会话中快速回复。enabled：启用此功能并关闭警告。warn：启用该功能，并在自动发送至不同收件人时发出警告。disabled：禁用此功能。
 ```
-  
+创建docker容器时，将ews-v2目录挂载到/root/.ehforwarderbot/profiles/default/即可  
