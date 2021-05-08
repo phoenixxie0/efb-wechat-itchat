@@ -15,7 +15,7 @@ slave_channels:
     - blueset.wechat
 middlewares:
     #- catbaron.link_preview    #根据自己的情况决定是否启用[使用参考]
-    #- catbaron.mp_instanceview #根据自己的情况决定是否启用[使用参考](https://github.com/catbaron0/efb-mp-instanceview-middleware#enable)
+    #- catbaron.mp_instantview #根据自己的情况决定是否启用[使用参考](https://github.com/catbaron0/efb-mp-instantview-middleware#enable)
 ```
 - `ews-v2/blueset.wechat/config.yaml` 参考内容如下：
 ```yaml
