@@ -53,6 +53,7 @@ RUN set -ex \
         && sed -i "s/{self.chat_type_emoji}/丨/g" /usr/lib/python3.8/site-packages/efb_telegram_master/chat.py \
         && pip3 install git+https://github.com/catbaron0/efb-mp-instantview-middleware \
         && pip3 install git+https://github.com/catbaron0/efb-link_preview-middleware \
-        && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware 
+        && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware \
+        && pip3 install git+https://github.com/ehForwarderBot/efb-voice_recog-middleware
 
 CMD ["ehforwarderbot"]
