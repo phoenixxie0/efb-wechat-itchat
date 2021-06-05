@@ -54,6 +54,7 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-mp-instantview-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware \
-        && pip3 install git+https://github.com/ehForwarderBot/efb-voice_recog-middleware
+        && pip3 install git+https://github.com/ehForwarderBot/efb-voice_recog-middleware \
+        && pip3 install python-telegram-bot[socks]
 
 CMD ["ehforwarderbot"]
