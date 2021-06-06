@@ -8,14 +8,23 @@ ews-v2
 │   ├── config.yaml
 └── config.yaml
 ```
+该Docker已添加python-telegram-bot[socks]支持socks5代理，以及如下中间件:
+```
+efb-mp-instantview-middleware
+efb-link_preview-middleware
+efb-patch-middleware
+efb-voice_recog-middleware
+```
 - `ews-v2/config.yaml` 参考内容如下：
 ```yaml
 master_channel: blueset.telegram
 slave_channels:
     - blueset.wechat
 middlewares:
+    #- catbaron.voice_recog     #语音识别服务
     #- catbaron.link_preview    #根据自己的情况决定是否启用[使用参考]
-    #- catbaron.mp_instantview #根据自己的情况决定是否启用[使用参考](https://github.com/catbaron0/efb-mp-instantview-middleware#enable)
+    #- catbaron.mp_instanceview #根据自己的情况决定是否启用[使用参考](https://github.com/ehForwarderBot/efb-mp-instantview-middleware#enable)
+    #- patch.PatchMiddleware
 ```
 - `ews-v2/blueset.wechat/config.yaml` 参考内容如下：
 ```yaml
