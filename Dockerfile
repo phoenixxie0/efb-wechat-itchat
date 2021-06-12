@@ -14,31 +14,13 @@ RUN set -ex \
                 libwebp \
                 freetype \
                 lcms2 \
-                openjpeg \
-                py3-olefile \
+                openjpeg openjpeg-dev \
                 openblas \
-                py3-numpy \
-                py3-pillow \
-                py3-requests \
-                python3-dev \
-                py3-pip \
-                py3-cryptography \
-                py3-decorator \
+                py3-olefile py3-numpy py3-pillow py3-requests python3-dev py3-pip py3-cryptography py3-decorator \
                 git \
                 jpeg-dev \
                 zlib-dev \
-                tzdata \
-                iproute2 \
-                cairo-dev \
-                cairo \
-                cairo-tools \
-                jpeg-dev \
-                freetype-dev \
-                lcms2-dev \
-                openjpeg-dev \
-                tiff-dev \
-                tk-dev \
-                tcl-dev \
+                cairo cairo-dev \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
