@@ -7,20 +7,21 @@ RUN set -ex \
         && apk update && apk upgrade \
         && apk add --no-cache udns \
         && apk add --no-cache --virtual .run-deps \
-                ca-certificates \
+                ca-certificates tzdata \
                 ffmpeg \
                 libmagic \
-                tiff \
+                tiff tiff-dev \
                 libwebp \
-                freetype \
-                lcms2 \
+                freetype freetype-dev \
+                lcms2 lcms2-dev \
                 openjpeg openjpeg-dev \
                 openblas \
                 py3-olefile py3-numpy py3-pillow py3-requests python3-dev py3-pip py3-cryptography py3-decorator \
                 git \
                 jpeg-dev \
                 zlib-dev \
-                cairo cairo-dev \
+                cairo cairo-dev cairo-tools \
+                tk-dev tcl-dev \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
