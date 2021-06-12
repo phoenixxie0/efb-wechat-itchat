@@ -35,8 +35,9 @@ RUN set -ex \
         && sed -i "s/{self.chat_type_emoji}/丨/g" /usr/lib/python3.8/site-packages/efb_telegram_master/chat.py \
         && pip3 install git+https://github.com/ehForwarderBot/efb-mp-instantview-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
-        && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-voice_recog-middleware \
+        && pip3 install git+https://github.com/ehForwarderBot/efb-msg_blocker-middleware \
+        && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware \
         && pip3 install git+https://github.com/zhangzhishan/efb-filter-middleware \
         && pip3 install python-telegram-bot[socks]
 
