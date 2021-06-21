@@ -1,7 +1,8 @@
-FROM alpine
+FROM alpine:latest
 MAINTAINER Phoenix <hkxseven007@gmail.com>
 
 ENV LANG C.UTF-8
+ENV TZ 'Asia/Shanghai'
 
 RUN set -ex \
         && apk update && apk upgrade \
@@ -10,18 +11,16 @@ RUN set -ex \
                 ca-certificates tzdata \
                 ffmpeg \
                 libmagic \
-                tiff tiff-dev \
+                tiff \
                 libwebp \
-                freetype freetype-dev \
-                lcms2 lcms2-dev \
-                openjpeg openjpeg-dev \
+                freetype \
+                lcms2 \
+                openjpeg \
                 openblas \
                 py3-olefile py3-numpy py3-pillow py3-requests python3-dev py3-pip py3-cryptography py3-decorator \
                 git \
-                jpeg-dev \
                 zlib-dev \
-                cairo cairo-dev cairo-tools \
-                tk-dev tcl-dev \
+                cairo \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
