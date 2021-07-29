@@ -32,8 +32,8 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave \
         && pip3 install lottie \
         && pip3 install cairosvg \
-        && sed -i 's/channel_emoji = "💬"/channel_emoji = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/lib/python3.8/site-packages/efb_wechat_slave/__init__.py \
-        && sed -i "s/{self.chat_type_emoji}/丨/g" /usr/lib/python3.8/site-packages/efb_telegram_master/chat.py \
+        && sed -i 's/channel_emoji = "💬"/channel_emoji = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/lib/python3.*/site-packages/efb_wechat_slave/__init__.py \
+        && sed -i "s/{self.chat_type_emoji}/丨/g" /usr/lib/python3.*/site-packages/efb_telegram_master/chat.py \
         && pip3 install git+https://github.com/ehForwarderBot/efb-mp-instantview-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-voice_recog-middleware \
