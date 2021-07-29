@@ -13,15 +13,14 @@ RUN set -ex \
                 libmagic \
                 tiff tiff-dev \
                 libwebp \
-                freetype freetype-dev \
-                lcms2 lcms2-dev \
-                openjpeg openjpeg-dev jpeg-dev \
+                freetype \
+                lcms2 \
+                openjpeg  \
                 openblas \
                 py3-olefile py3-numpy py3-pillow py3-requests python3-dev py3-pip py3-cryptography py3-decorator \
                 git \
                 zlib-dev \
-                cairo cairo-dev cairo-tools \
-                tk-dev tcl-dev \
+                cairo \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
