@@ -11,7 +11,7 @@ RUN set -ex \
                 ca-certificates tzdata \
                 ffmpeg \
                 libmagic \
-                tiff tiff-dev \
+                tiff \
                 libwebp \
                 freetype \
                 lcms2 \
@@ -39,6 +39,7 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-msg_blocker-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware \
         && pip3 install git+https://github.com/zhangzhishan/efb-filter-middleware \
-        && pip3 install python-telegram-bot[socks]
+        && pip3 install python-telegram-bot[socks] \
+        && rm -rf ~/.cache
 
 CMD ["ehforwarderbot"]
