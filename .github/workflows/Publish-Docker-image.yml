@@ -8,8 +8,7 @@ name: Publish Docker image
 on:
   workflow_dispatch: # 手动触发
   #push:
-       # branches:
-            #- main
+    #branches: [ main ]
   release:
     types: [published]
 
