@@ -5,7 +5,6 @@ ENV LANG C.UTF-8
 ENV TZ 'Asia/Shanghai'
 
 RUN set -ex \
-        && apk update && apk upgrade \
         && apk add --no-cache udns \
         && apk add --no-cache --virtual .run-deps \
                 ca-certificates tzdata \
@@ -17,7 +16,7 @@ RUN set -ex \
                 lcms2 \
                 openjpeg  \
                 openblas \
-                py3-olefile py3-numpy py3-pillow py3-requests python3-dev py3-pip py3-cryptography py3-decorator \
+                py3-olefile py3-numpy py3-pillow py3-requests py3-pip py3-cryptography py3-decorator \
                 git \
                 zlib-dev \
                 cairo \
