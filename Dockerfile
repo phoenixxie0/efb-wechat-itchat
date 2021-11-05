@@ -37,7 +37,8 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-voice_recog-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-msg_blocker-middleware \
         && pip3 install git+https://github.com/ehForwarderBot/efb-patch-middleware \
-        && pip3 install git+https://github.com/zhangzhishan/efb-filter-middleware \
+        #&& pip3 install git+https://github.com/zhangzhishan/efb-filter-middleware \
+        && pip3 install git+https://github.com/ahxxm/efb-filter-middleware \
         && pip3 install python-telegram-bot[socks] \
         && rm -rf ~/.cache
 
