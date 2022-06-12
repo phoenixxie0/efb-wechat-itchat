@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 ENV TZ 'Asia/Shanghai'
 
 RUN set -ex \
-        && apk add --no-cache --virtual .run-deps sed build-base libffi-dev openssl-dev python3-dev git \
+        && apk add --no-cache --virtual .build-deps sed build-base libffi-dev openssl-dev python3-dev git \
         && apk add --no-cache tzdata ca-certificates ffmpeg libmagic tiff libwebp freetype lcms2 openjpeg openblas zlib-dev cairo \
                  python3 py3-olefile py3-numpy py3-pillow py3-pip py3-cryptography py3-decorator \
 
