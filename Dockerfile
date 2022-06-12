@@ -5,21 +5,10 @@ ENV LANG C.UTF-8
 ENV TZ 'Asia/Shanghai'
 
 RUN set -ex \
-        && apk add --no-cache udns \
-        && apk add --no-cache --virtual .run-deps \
-                ca-certificates tzdata \
-                ffmpeg \
-                libmagic \
-                tiff \
-                libwebp \
-                freetype \
-                lcms2 \
-                openjpeg  \
-                openblas \
-                py3-olefile py3-numpy py3-pillow py3-requests py3-pip py3-cryptography py3-decorator \
-                git \
-                zlib-dev \
-                cairo \
+        && apk add --no-cache --virtual .run-deps sed build-base libffi-dev openssl-dev python3-dev git \
+        && apk add --no-cache tzdata ca-certificates ffmpeg libmagic tiff libwebp freetype lcms2 openjpeg openblas zlib-dev cairo \
+                 python3 py3-olefile py3-numpy py3-pillow py3-pip py3-cryptography py3-decorator \
+
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
@@ -40,6 +29,7 @@ RUN set -ex \
         #&& pip3 install git+https://github.com/zhangzhishan/efb-filter-middleware \
         && pip3 install git+https://github.com/ahxxm/efb-filter-middleware \
         && pip3 install python-telegram-bot[socks] \
+        && apk del .build-deps \
         && rm -rf ~/.cache
 
 CMD ["ehforwarderbot"]
