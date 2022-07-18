@@ -10,9 +10,6 @@ RUN set -ex \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
-        && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-        && echo "Asia/Shanghai" > /etc/timezone
-
 RUN set -ex \
         #&& pip3 install --upgrade pip \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
