@@ -30,7 +30,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: phoenixxie/ews-v2
+          images: phoenixxie/efb-wechat-itchat
           tags: latest
 
       - name: Build and push Docker image
