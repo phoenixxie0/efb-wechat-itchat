@@ -1,7 +1,7 @@
-### 创建一个目录`ews-v2`用于存放备份配置等数据，迁移重装的时候只需要备份整个ews-v2目录即可
+### 创建一个目录`efb-wechat`用于存放备份配置等数据，迁移重装的时候只需要备份整个efb-wechat目录即可
 需要新建的目录文件结构参考如下:
 ```
-ews-v2
+efb-wechat
 ├── blueset.telegram
 │   ├── config.yaml
 ├── blueset.wechat
@@ -26,7 +26,7 @@ middlewares:
     #- catbaron.mp_instanceview #根据自己的情况决定是否启用[使用参考](https://github.com/ehForwarderBot/efb-mp-instantview-middleware#enable)
     #- patch.PatchMiddleware
 ```
-- `ews-v2/blueset.wechat/config.yaml` 参考内容如下：
+- `efb-wechat/blueset.wechat/config.yaml` 参考内容如下：
 ```yaml
 flags:
     refresh_friends: true #每当请求会话列表时，强制刷新会话列表。默认值: false
@@ -43,7 +43,7 @@ flags:
     user_agent: null #指定登陆网页版微信时所使用的「用户代理」（user agent）字符串。不指定则使用 itchat 提供的默认值。 默认null
 ```
 
-- `ews-v2/blueset.telegram/config.yaml` 参考内容如下
+- `efb-wechat/blueset.telegram/config.yaml` 参考内容如下
 ```yaml
 token: "1111111:AAAAAAAAAAAAAAAAAAAAAAAA"#替换为自己的bot Token
 admins:
@@ -61,4 +61,4 @@ flags:
     animated_stickers: true #启用对动态贴纸的实验支持。注意：您可能需要安装二进制依赖 ``libcairo`` 才能启用此功能。
     send_to_last_chat: true #在未绑定的会话中快速回复。enabled：启用此功能并关闭警告。warn：启用该功能，并在自动发送至不同收件人时发出警告。disabled：禁用此功能。
 ```
-创建docker容器时，将ews-v2目录挂载到/root/.ehforwarderbot/profiles/default/即可  
+创建docker容器时，将efb-wechat目录挂载到/root/.ehforwarderbot/profiles/default/即可  
