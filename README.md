@@ -12,7 +12,9 @@ efb-wechat
 ```
 efb-mp-instantview-middleware
 efb-link_preview-middleware
+efb-msg_blocker-middleware
 efb-patch-middleware
+efb-filter-middleware
 ```
 - `efb-wechat/config.yaml` 参考内容如下：
 ```yaml
