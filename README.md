@@ -13,9 +13,8 @@ efb-wechat
 efb-mp-instantview-middleware
 efb-link_preview-middleware
 efb-patch-middleware
-efb-voice_recog-middleware
 ```
-- `ews-v2/config.yaml` 参考内容如下：
+- `efb-wechat/config.yaml` 参考内容如下：
 ```yaml
 master_channel: blueset.telegram
 slave_channels:
