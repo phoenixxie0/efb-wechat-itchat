@@ -10,10 +10,10 @@ efb-wechat
 ```
 该Docker已添加python-telegram-bot[socks]支持socks5代理，以及如下中间件:
 ```
-efb-mp-instantview-middleware
+efb-mp-instantview-middleware 需要另外配置，建议参考官方文档
 efb-link_preview-middleware
 efb-patch-middleware
-efb-filter-middleware
+efb-filter-middleware 需要另外配置参数，建议参考官方文档
 ```
 - `efb-wechat/config.yaml` 参考内容如下：
 ```yaml
@@ -62,3 +62,5 @@ flags:
     send_to_last_chat: true #在未绑定的会话中快速回复。enabled：启用此功能并关闭警告。warn：启用该功能，并在自动发送至不同收件人时发出警告。disabled：禁用此功能。
 ```
 创建docker容器时，将efb-wechat目录挂载到/root/.ehforwarderbot/profiles/default/即可  
+例如：     
+docker run -d --restart=always --name wechat -v ~/efb-wechat:/root/.ehforwarderbot/profiles/default/ phoenixxie/efb-wechat-itchat       
