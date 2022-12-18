@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 ENV TZ 'Asia/Shanghai'
 
 RUN set -ex \
-        && apk add --no-cache --virtual .build-deps sed gcc libffi-dev openssl-dev git \
+        && apk add --no-cache --virtual .build-deps sed gcc musl-dev libffi-dev openssl-dev git \
         && apk add --no-cache tzdata ca-certificates ffmpeg libmagic openjpeg zlib-dev libwebp cairo \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
