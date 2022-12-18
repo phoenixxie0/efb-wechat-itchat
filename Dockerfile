@@ -1,4 +1,4 @@
-FROM python:3.8.13-alpine3.16
+FROM python:3.8-alpine
 MAINTAINER Phoenix <hkxseven007@gmail.com>
 
 ENV LANG C.UTF-8
@@ -12,7 +12,7 @@ RUN set -ex \
 
 RUN set -ex \
         && pip3 install --upgrade pip \
-        && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
+        && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot@2.1.1 \
         #&& pip3 install git+https://github.com/QQ-War/efb-telegram-master.git \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave \
