@@ -13,7 +13,7 @@ RUN set -ex \
 RUN set -ex \
         #&& pip3 install --upgrade pip \
         #&& pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
-        && pip3 install git+https://github.com/QQ-War/efb-telegram-master.git
+        && pip3 install git+https://github.com/QQ-War/efb-telegram-master.git \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave \
         #&& pip3 install git+https://github.com/phoenixxie0/efb-wechat-slave \
